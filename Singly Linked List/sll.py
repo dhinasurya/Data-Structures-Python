@@ -2,7 +2,7 @@ class Node:
     def __init__(self, value):
         self.value = value
         self.next = None
-        
+
 
 class LinkedList:
     def __init__(self, value):
@@ -16,7 +16,7 @@ class LinkedList:
         while temp is not None:
             print(temp.value)
             temp = temp.next
-        
+
     def append(self, value):
         new_node = Node(value)
         if self.length == 0:
@@ -33,7 +33,7 @@ class LinkedList:
             return None
         temp = self.head
         pre = self.head
-        while(temp.next):
+        while temp.next:
             pre = temp
             temp = temp.next
         self.tail = pre
@@ -73,14 +73,14 @@ class LinkedList:
         for _ in range(index):
             temp = temp.next
         return temp
-        
+
     def set_value(self, index, value):
         temp = self.get(index)
         if temp:
             temp.value = value
             return True
         return False
-    
+
     def insert(self, index, value):
         if index < 0 or index > self.length:
             return False
@@ -92,8 +92,8 @@ class LinkedList:
         temp = self.get(index - 1)
         new_node.next = temp.next
         temp.next = new_node
-        self.length += 1   
-        return True  
+        self.length += 1
+        return True
 
     def remove(self, index):
         if index < 0 or index >= self.length:
@@ -125,15 +125,19 @@ class LinkedList:
             return  # No need to sort if the list is empty or has only one node
 
         end = None  # Marks the end of the sorted portion
-        while end != self.head: # base condition to reduce the base no of elements after big element is sorted
+        while (
+            end != self.head
+        ):  # base condition to reduce the base no of elements after big element is sorted
             current = self.head
             while current.next != end:
                 if current.value > current.next.value:  # Compare adjacent nodes
                     # Swap the values of the two nodes
-                    current.value, current.next.value = current.next.value, current.value
+                    current.value, current.next.value = (
+                        current.next.value,
+                        current.value,
+                    )
                 current = current.next
             end = current  # Move the end marker to the last sorted node
-
 
     def selection_sort(self):
         if not self.head or not self.head.next:
@@ -150,7 +154,7 @@ class LinkedList:
             # Swap the values of the current node and the smallest node
             current.value, min_node.value = min_node.value, current.value
             current = current.next
-    
+
     def insertion_sort(self):
         if not self.head or not self.head.next:
             return  # No need to sort if the list is empty or has only one node

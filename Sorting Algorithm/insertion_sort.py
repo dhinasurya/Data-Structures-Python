@@ -6,7 +6,9 @@ def insertion_sort(my_list):
 
         # Inner loop: Shift elements to the right to make space for the current element
         while j >= 0 and temp < my_list[j]:
-            my_list[j + 1] = my_list[j]  # Shift the larger element one position to the right
+            my_list[j + 1] = my_list[
+                j
+            ]  # Shift the larger element one position to the right
             j -= 1  # Move to the previous element
 
         # Insert the current element into its correct position
@@ -14,6 +16,7 @@ def insertion_sort(my_list):
 
     # Return the sorted list
     return my_list
+
 
 # Example list to sort
 print(insertion_sort([3, 25, 14, 89, 1]))
