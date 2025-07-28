@@ -1,9 +1,11 @@
 import time
 
+
 class Node:
     def __init__(self, value):
         self.value = value
         self.next = None
+
 
 class LinkedList:
     def __init__(self, value):
@@ -79,6 +81,7 @@ class LinkedList:
 
         print("\nFinal Reversed List:")
         self.print_list()
+
 
 # 🧪 Test with your own examples!
 linked_list = LinkedList(1)

@@ -3,12 +3,13 @@ class Node:
         self.value = value
         self.next = None
 
+
 class Stack:
     def __init__(self, value):
         new_node = Node(value)
         self.top = new_node
-        self.height = 1 
-    
+        self.height = 1
+
     def print_stack(self):
         temp = self.top
         while temp:
@@ -24,7 +25,7 @@ class Stack:
             self.top = new_node
         self.height += 1
         return True
-    
+
     def pop(self):
         if self.top is None:
             return None

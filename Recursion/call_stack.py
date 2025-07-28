@@ -1,14 +1,15 @@
 def funcThree():
-    print('Three')
+    print("Three")
+
 
 def funcTwo():
     funcThree()
-    print('Two')
+    print("Two")
+
 
 def funcOne():
     funcTwo()
-    print('One')
+    print("One")
 
 
 funcOne()
-

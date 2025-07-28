@@ -10,7 +10,7 @@ class Queue:
         self.first = new_node
         self.last = new_node
         self.length = 1
-    
+
     def print_queue(self):
         temp = self.first
         while temp:
@@ -27,7 +27,7 @@ class Queue:
             self.last = new_node
         self.length += 1
         return True
-    
+
     def dequeue(self):
         if self.first is None:
             return None
@@ -42,7 +42,5 @@ class Queue:
         return temp
 
 
-
 my_queue = Queue(23)
 my_queue.print_queue()
-

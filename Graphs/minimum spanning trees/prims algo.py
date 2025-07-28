@@ -1,6 +1,7 @@
 import heapq
 from collections import defaultdict
 
+
 def prims_algorithm(num_nodes, edges):
     # Step 1: Build the graph as an adjacency list
     graph = defaultdict(list)
@@ -50,10 +51,10 @@ edges = [
     (1, 3, 5),
     (2, 3, 1),
     (3, 4, 3),
-    (4, 4, 10)  # Self-loop, will be ignored
+    (4, 4, 10),  # Self-loop, will be ignored
 ]
 
 cost, mst = prims_algorithm(num_nodes, edges)
 
 print("MST Cost:", cost)
-print("Edges in MST:", mst) 
+print("Edges in MST:", mst)
